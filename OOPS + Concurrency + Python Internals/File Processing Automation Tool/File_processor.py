@@ -6,7 +6,7 @@ import json
 from concurrent.futures import ThreadPoolExecutor
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-SOURCE_DIR = os.path.join(BASE_DIR, "Incoming")
+SOURCE_DIR = r"C:\Users\priya\Desktop\generated\Incoming"
 TARGET_BASE = os.path.join(BASE_DIR, "processed_data")
 SUMMARY_FILE = os.path.join(BASE_DIR, "summary.json")
 LOG_FILE = os.path.join(BASE_DIR,"automation.log")
@@ -20,6 +20,27 @@ logging.basicConfig(
 files_by_extension = {}
 summary_data = {}
 
+def data_eval(df,fn):
+    logging.info(f"Processing started for {fn}")
+
+    req_cols = ['Product', 'Quantity', 'Amount']
+    
+    cols_pres = True
+    for col in req_cols:
+        if col not in df.columns:
+            cols_pres = False
+    
+    if cols_pres:
+        product_group = df.groupby('Product')[['Quantity', 'Amount']].sum()
+        product_dtls = product_group.to_dict(orient='index')
+        total = round(float(df['Amount'].sum()),2)
+
+        summary_data[fn] = {"total sales": round(total,2),"products": product_dtls}
+        
+        logging.info(f"Processing finished for {fn}")
+    else:
+        logging.warning(f"Skipping {fn}: Missing required columns {req_cols}")
+
 def processing(file_info):
     fp, folder_name, folder_path = file_info
     try:
@@ -31,25 +52,12 @@ def processing(file_info):
 
         if folder_name == "CSV":
             df = pd.read_csv(fd)
-            logging.info(f"Processing started for {fn}")
+            data_eval(df,fn)
 
-            req_cols = ['Product', 'Quantity', 'Amount']
+        elif folder_name == "XLSX":
+            df = pd.read_excel(fd)
+            data_eval(df,fn)
             
-            cols_pres = True
-            for col in req_cols:
-                if col not in df.columns:
-                    cols_pres = False
-            
-            if cols_pres:
-                product_group = df.groupby('Product')[['Quantity', 'Amount']].sum()
-                product_dtls = product_group.to_dict(orient='index')
-                total = round(float(df['Amount'].sum()),2)
-
-                summary_data[fn] = {"total sales": round(total,2),"products": product_dtls}
-                
-                logging.info(f"Processing finished for {fn}")
-            else:
-                logging.warning(f"Skipping {fn}: Missing required columns {req_cols}")
 
     except Exception as e:
         logging.error(f"Failed to move {fp}: {e}")
@@ -75,6 +83,8 @@ for file_extension, file_path in files_by_extension.items():
         folder_path = os.path.join(TARGET_BASE,"User activity logs")
     elif folder_name == "TXT":
         folder_path = os.path.join(TARGET_BASE,"Server error dumps")
+    elif folder_name == "XLSX":
+        folder_path = os.path.join(TARGET_BASE,"Excel files")
     else:
         folder_path = os.path.join(TARGET_BASE,"Others")
 

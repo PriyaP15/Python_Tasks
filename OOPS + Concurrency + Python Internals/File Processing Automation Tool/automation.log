@@ -1,51 +1,54 @@
-2026-02-08 15:23:20,986 - Moved Sales_Report_1.csv to Sales reports
-2026-02-08 15:23:20,988 - Moved Sales_Report_10.csv to Sales reports
-2026-02-08 15:23:20,992 - Moved Sales_Report_2.csv to Sales reports
-2026-02-08 15:23:20,992 - Moved Sales_Report_3.csv to Sales reports
-2026-02-08 15:23:20,994 - Moved Sales_Report_4.csv to Sales reports
-2026-02-08 15:23:20,996 - Moved Sales_Report_5.csv to Sales reports
-2026-02-08 15:23:20,998 - Moved Sales_Report_7.csv to Sales reports
-2026-02-08 15:23:20,998 - Moved Sales_Report_6.csv to Sales reports
-2026-02-08 15:23:21,001 - Moved Sales_Report_8.csv to Sales reports
-2026-02-08 15:23:21,001 - Moved Sales_Report_9.csv to Sales reports
-2026-02-08 15:23:21,001 - Moved Server_Dump_1.txt to Server error dumps
-2026-02-08 15:23:21,005 - Moved Server_Dump_10.txt to Server error dumps
-2026-02-08 15:23:21,036 - Moved Server_Dump_2.txt to Server error dumps
-2026-02-08 15:23:21,052 - Moved Server_Dump_4.txt to Server error dumps
-2026-02-08 15:23:21,053 - Moved Server_Dump_3.txt to Server error dumps
-2026-02-08 15:23:21,065 - Moved Server_Dump_5.txt to Server error dumps
-2026-02-08 15:23:21,078 - Moved Server_Dump_7.txt to Server error dumps
-2026-02-08 15:23:21,091 - Moved Server_Dump_6.txt to Server error dumps
-2026-02-08 15:23:21,106 - Moved Server_Dump_8.txt to Server error dumps
-2026-02-08 15:23:21,110 - Moved Server_Dump_9.txt to Server error dumps
-2026-02-08 15:23:21,119 - Moved User_Activity_1.json to User activity logs
-2026-02-08 15:23:21,121 - Moved User_Activity_10.json to User activity logs
-2026-02-08 15:23:21,132 - Moved User_Activity_2.json to User activity logs
-2026-02-08 15:23:21,141 - Moved User_Activity_3.json to User activity logs
-2026-02-08 15:23:21,144 - Moved User_Activity_4.json to User activity logs
-2026-02-08 15:23:21,150 - Moved User_Activity_5.json to User activity logs
-2026-02-08 15:23:21,160 - Moved User_Activity_7.json to User activity logs
-2026-02-08 15:23:21,162 - Moved User_Activity_6.json to User activity logs
-2026-02-08 15:23:21,169 - Moved User_Activity_8.json to User activity logs
-2026-02-08 15:23:21,177 - Moved User_Activity_9.json to User activity logs
-2026-02-08 15:23:21,436 - Processing started for Sales_Report_2.csv
-2026-02-08 15:23:21,449 - Processing started for Sales_Report_4.csv
-2026-02-08 15:23:21,465 - Processing started for Sales_Report_10.csv
-2026-02-08 15:23:21,485 - Processing started for Sales_Report_9.csv
-2026-02-08 15:23:21,494 - Processing started for Sales_Report_6.csv
-2026-02-08 15:23:21,507 - Processing started for Sales_Report_1.csv
-2026-02-08 15:23:21,509 - Processing started for Sales_Report_5.csv
-2026-02-08 15:23:21,525 - Processing started for Sales_Report_7.csv
-2026-02-08 15:23:21,548 - Processing started for Sales_Report_3.csv
-2026-02-08 15:23:21,572 - Processing finished for Sales_Report_2.csv
-2026-02-08 15:23:21,575 - Processing started for Sales_Report_8.csv
-2026-02-08 15:23:21,580 - Processing finished for Sales_Report_10.csv
-2026-02-08 15:23:21,585 - Processing finished for Sales_Report_4.csv
-2026-02-08 15:23:21,585 - Processing finished for Sales_Report_5.csv
-2026-02-08 15:23:21,595 - Processing finished for Sales_Report_1.csv
-2026-02-08 15:23:21,600 - Processing finished for Sales_Report_6.csv
-2026-02-08 15:23:21,601 - Processing finished for Sales_Report_3.csv
-2026-02-08 15:23:21,601 - Processing finished for Sales_Report_9.csv
-2026-02-08 15:23:21,601 - Processing finished for Sales_Report_7.csv
-2026-02-08 15:23:21,609 - Processing finished for Sales_Report_8.csv
-2026-02-08 15:23:21,633 - Summary saved to summary.json
+2026-02-09 15:22:34,743 - Moved Large_Transactions.xlsx to Excel files
+2026-02-09 15:22:34,745 - Moved Sales_Report_10.csv to Sales reports
+2026-02-09 15:22:34,745 - Moved Sales_Report_2.csv to Sales reports
+2026-02-09 15:22:34,745 - Moved Sales_Report_1.csv to Sales reports
+2026-02-09 15:22:34,750 - Moved Sales_Report_3.csv to Sales reports
+2026-02-09 15:22:34,771 - Moved Sales_Report_4.csv to Sales reports
+2026-02-09 15:22:34,787 - Moved Sales_Report_5.csv to Sales reports
+2026-02-09 15:22:34,790 - Moved Sales_Report_6.csv to Sales reports
+2026-02-09 15:22:34,804 - Moved Sales_Report_9.csv to Sales reports
+2026-02-09 15:22:34,810 - Moved Sales_Report_8.csv to Sales reports
+2026-02-09 15:22:34,810 - Moved Server_Dump_1.txt to Server error dumps
+2026-02-09 15:22:34,810 - Moved Sales_Report_7.csv to Sales reports
+2026-02-09 15:22:34,826 - Moved Server_Dump_10.txt to Server error dumps
+2026-02-09 15:22:34,877 - Moved Server_Dump_2.txt to Server error dumps
+2026-02-09 15:22:34,894 - Moved Server_Dump_3.txt to Server error dumps
+2026-02-09 15:22:34,912 - Moved Server_Dump_4.txt to Server error dumps
+2026-02-09 15:22:34,925 - Moved Server_Dump_5.txt to Server error dumps
+2026-02-09 15:22:34,942 - Moved Server_Dump_6.txt to Server error dumps
+2026-02-09 15:22:34,953 - Moved Server_Dump_7.txt to Server error dumps
+2026-02-09 15:22:35,002 - Moved Server_Dump_8.txt to Server error dumps
+2026-02-09 15:22:35,055 - Moved Server_Dump_9.txt to Server error dumps
+2026-02-09 15:22:35,089 - Moved User_Activity_1.json to User activity logs
+2026-02-09 15:22:35,099 - Processing started for Sales_Report_1.csv
+2026-02-09 15:22:35,134 - Moved User_Activity_10.json to User activity logs
+2026-02-09 15:22:35,159 - Processing started for Sales_Report_3.csv
+2026-02-09 15:22:35,168 - Processing started for Sales_Report_2.csv
+2026-02-09 15:22:35,188 - Moved User_Activity_2.json to User activity logs
+2026-02-09 15:22:35,199 - Processing started for Sales_Report_4.csv
+2026-02-09 15:22:35,211 - Moved User_Activity_3.json to User activity logs
+2026-02-09 15:22:35,229 - Processing started for Sales_Report_5.csv
+2026-02-09 15:22:35,234 - Moved User_Activity_4.json to User activity logs
+2026-02-09 15:22:35,256 - Processing started for Sales_Report_10.csv
+2026-02-09 15:22:35,272 - Processing started for Sales_Report_8.csv
+2026-02-09 15:22:35,299 - Moved User_Activity_5.json to User activity logs
+2026-02-09 15:22:35,301 - Processing finished for Sales_Report_5.csv
+2026-02-09 15:22:35,303 - Processing started for Sales_Report_6.csv
+2026-02-09 15:22:35,303 - Processing finished for Sales_Report_1.csv
+2026-02-09 15:22:35,307 - Processing finished for Sales_Report_2.csv
+2026-02-09 15:22:35,307 - Processing finished for Sales_Report_3.csv
+2026-02-09 15:22:35,315 - Processing finished for Sales_Report_4.csv
+2026-02-09 15:22:35,317 - Processing finished for Sales_Report_8.csv
+2026-02-09 15:22:35,321 - Processing started for Sales_Report_9.csv
+2026-02-09 15:22:35,329 - Moved User_Activity_6.json to User activity logs
+2026-02-09 15:22:35,336 - Moved User_Activity_7.json to User activity logs
+2026-02-09 15:22:35,340 - Processing finished for Sales_Report_10.csv
+2026-02-09 15:22:35,343 - Moved User_Activity_9.json to User activity logs
+2026-02-09 15:22:35,343 - Moved User_Activity_8.json to User activity logs
+2026-02-09 15:22:35,360 - Processing finished for Sales_Report_6.csv
+2026-02-09 15:22:35,368 - Processing started for Sales_Report_7.csv
+2026-02-09 15:22:35,382 - Processing finished for Sales_Report_9.csv
+2026-02-09 15:22:35,392 - Processing finished for Sales_Report_7.csv
+2026-02-09 15:22:43,418 - Processing started for Large_Transactions.xlsx
+2026-02-09 15:22:43,434 - Processing finished for Large_Transactions.xlsx
+2026-02-09 15:22:43,451 - Summary saved to summary.json
