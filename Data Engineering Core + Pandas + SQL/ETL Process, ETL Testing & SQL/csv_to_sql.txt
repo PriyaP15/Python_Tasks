@@ -1,0 +1,73 @@
+create database loan;
+use loan;
+
+create table loan_demo (
+    Loan_ID varchar(50),
+    Gender varchar(20),
+    Married varchar(20),
+    Dependents varchar(20),
+    Education varchar(50),
+    Self_Employed varchar(20),
+    ApplicantIncome varchar(50),
+    CoapplicantIncome varchar(50),
+    LoanAmount varchar(50),
+    Loan_Amount_Term varchar(50),
+    Credit_History varchar(20),
+    Property_Area varchar(50)
+);
+
+show variables like "secure_file_priv";
+
+load data infile 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/loan_test.csv' 
+into table loan_demo 
+fields terminated by ',' 
+enclosed by '"' 
+lines terminated by '\r\n' 
+ignore 1 rows;
+
+select COUNT(*) from loan_demo;
+
+create table loan_clean as 
+select
+Loan_ID, 
+NULLIF(NULLIF(Gender, 'nan'), '') as Gender, 
+NULLIF(NULLIF(Married, 'nan'), '') as Married, 
+NULLIF(NULLIF(Dependents, 'nan'), '') as Dependents, 
+Education, 
+NULLIF(NULLIF(Self_Employed, 'nan'), '') as Self_Employed,
+CAST(NULLIF(NULLIF(ApplicantIncome, 'nan'), '') as SIGNED) as ApplicantIncome,
+CAST(NULLIF(NULLIF(CoapplicantIncome, 'nan'), '') as DECIMAL(10,2)) as CoapplicantIncome, 
+CAST(NULLIF(NULLIF(LoanAmount, 'nan'), '') as DECIMAL(10,2)) as LoanAmount, 
+CAST(NULLIF(NULLIF(Loan_Amount_Term, 'nan'), '') as SIGNED) as Loan_Amount_Term, 
+CAST(NULLIF(NULLIF(Credit_History, 'nan'), '') as SIGNED) as Credit_History, 
+Property_Area from loan_demo;
+
+alter table loan_clean add primary key (Loan_ID);
+describe loan_clean;
+
+select COUNT(*)as demo_count from loan_demo ;
+select COUNT(*)as clean_count from loan_clean ;
+    
+select * from loan_clean;
+
+select 
+SUM(case when Gender is null then 1 else 0 end) as Missing_Gender,
+SUM(case when LoanAmount is null then 1 else 0 end) as Missing_Loan_Amount,
+SUM(case when Credit_History is null then 1 else 0 end) as Missing_Credit_History
+from loan_clean;
+
+select Education, COUNT(*) as Applicant_Count, ROUND(avg(ApplicantIncome), 2) as Avg_Income
+from loan_clean
+group by Education;
+
+
+set sql_safe_updates = 0;
+
+update loan_clean set Gender = 'Unknown' where Gender is null;
+update loan_clean set Self_Employed = 'Unknown' where Self_Employed is null;
+update loan_clean set Dependents = '0' where Dependents is null;
+
+set sql_safe_updates = 1;
+
+select SUM(case when Gender is null then 1 else 0 end) as Missing_Gender 
+from loan_clean;
