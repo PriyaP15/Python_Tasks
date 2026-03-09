@@ -1,0 +1,52 @@
+[
+    {
+        "model":"Xiaomi Redmi Note 12 Explorer",
+        "price":24999.0,
+        "rating":89.0
+    },
+    {
+        "model":"Samsung Galaxy A53 5G (8GB RAM + 128GB)",
+        "price":33499.0,
+        "rating":89.0
+    },
+    {
+        "model":"Motorola Edge 30 Pro 5G",
+        "price":34999.0,
+        "rating":89.0
+    },
+    {
+        "model":"Samsung Galaxy A53 (8GB RAM + 256GB)",
+        "price":36499.0,
+        "rating":89.0
+    },
+    {
+        "model":"Infinix Zero Ultra",
+        "price":36999.0,
+        "rating":89.0
+    },
+    {
+        "model":"Motorola Moto X40",
+        "price":39999.0,
+        "rating":89.0
+    },
+    {
+        "model":"Xiaomi 13 5G",
+        "price":46990.0,
+        "rating":89.0
+    },
+    {
+        "model":"Realme GT 2 Pro 5G (12GB RAM + 256GB)",
+        "price":46999.0,
+        "rating":89.0
+    },
+    {
+        "model":"Realme GT 2 Pro 5G",
+        "price":49959.0,
+        "rating":89.0
+    },
+    {
+        "model":"Motorola ThinkPhone",
+        "price":49990.0,
+        "rating":89.0
+    }
+]

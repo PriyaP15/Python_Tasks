@@ -1,0 +1,104 @@
+create database starSchema;
+use starSchema;
+
+
+create table Warehouse(
+	Warehouse_ID int primary key,
+    Office_Name varchar(50) not null,
+    City varchar(50) ,
+    Manager_name varchar(20) not null
+);
+INSERT INTO Warehouse VALUES
+(1, 'North Central Hub', 'Chicago', 'Michael Scott'),
+(2, 'Pacific Logistics', 'Seattle', 'Diane Nguyen'),
+(3, 'Atlantic Distribution', 'Boston', 'Arthur Curry');
+select * from Warehouse;
+
+
+
+create table Dates(
+	Date_ID int primary key,
+    Dte date not null,
+    Mnt varchar(10) not null,
+    Yr year ,
+    Quater varchar(2)
+);
+INSERT INTO Dates VALUES
+(1, '2026-01-10', 'January', 2026, 'Q1'),
+(2, '2026-01-15', 'January', 2026, 'Q1'),
+(3, '2026-01-28', 'January', 2026, 'Q1');
+select * from Dates;
+
+
+
+create table Items(
+	Item_ID int primary key,
+    Item_name varchar(50) unique,
+    Item_price int 
+);
+INSERT INTO Items VALUES
+(1, 'Wireless Headphones', 150),
+(2, 'Mechanical Keyboard', 120),
+(3, 'Ergonomic Mouse', 80),
+(4, '4K Monitor', 450),
+(5, 'USB-C Docking Station', 110);
+select * from Items;
+
+
+
+create table Employee(
+	Employee_ID int primary key,
+    Emp_name varchar(50) not null,
+    Gender varchar(1) not null,
+    Office_loc varchar(50),
+    Phone bigint unique,
+    Mail_ID varchar(50) unique
+);
+INSERT INTO Employee VALUES
+(1, 'Alice Thompson', 'F', 'Chicago', 9123456780, 'a.thompson@corp.com'),
+(2, 'Bob Richards', 'M', 'Seattle', 9123456781, 'b.richards@corp.com'),
+(3, 'Charlie Davis', 'M', 'Boston', 9123456782, 'c.davis@corp.com');
+select * from Employee;
+
+
+
+create table Customer(
+	Customer_ID int primary key,
+    Customer_name varchar(50) not null,
+    Address varchar(100),
+    Phone bigint unique,
+    Mail_ID varchar(50) unique
+);
+INSERT INTO Customer VALUES
+(1, 'TechNova Solutions', '123 Innovation Dr, SF', 8005551234, 'procurement@technova.com'),
+(2, 'Sarah Jenkins', '456 Maple St, NY', 8005555678, 'sarah.j@gmail.com'),
+(3, 'Global Retail Inc', '789 Business Pkwy, CHI', 8005559012, 'orders@globalretail.com');
+select * from Customer;
+
+
+
+
+create table orders(
+	Customer_ID int,
+    Date_ID int,
+    Employee_ID int,
+    Warehouse_ID int,
+    Item_ID int,
+    Order_ID int primary key,
+    Order_profit int not null,
+    Order_quaqntity int not null,
+    
+    FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID),
+    FOREIGN KEY (Date_ID) REFERENCES Dates(Date_ID),
+    FOREIGN KEY (Employee_ID) REFERENCES Employee(Employee_ID),
+    FOREIGN KEY (Warehouse_ID) REFERENCES Warehouse(Warehouse_ID),
+    FOREIGN KEY (Item_ID) REFERENCES Items(Item_ID)
+);
+INSERT INTO orders VALUES
+(1, 1, 1, 1, 4, 1001, 120, 2),
+(2, 2, 2, 2, 1, 1002, 45, 1),
+(3, 3, 3, 3, 2, 1003, 90, 3),
+(1, 1, 1, 1, 5, 1004, 30, 5),
+(2, 3, 2, 2, 3, 1005, 20, 2);
+select * from orders;
+
