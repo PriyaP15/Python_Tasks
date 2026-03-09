@@ -1,0 +1,50 @@
+{
+    "total_phones": 1020,
+    "max_price": 650000,
+    "min_price": 99,
+    "avg_rating": 78.26,
+    "top_5_expensive": [
+        {
+            "model": "Vertu Signature Touch",
+            "price_clean": 650000
+        },
+        {
+            "model": "Xiaomi Redmi K20 Pro Signature Edition",
+            "price_clean": 480000
+        },
+        {
+            "model": "Huawei Mate 50 RS Porsche Design",
+            "price_clean": 239999
+        },
+        {
+            "model": "Huawei Mate 30 RS Porsche Design",
+            "price_clean": 214990
+        },
+        {
+            "model": "Xiaomi Mi Mix Alpha",
+            "price_clean": 199990
+        }
+    ],
+    "top_5_rated": [
+        {
+            "model": "OnePlus 11 5G",
+            "rating": 89.0
+        },
+        {
+            "model": "Xiaomi 12T Pro 5G",
+            "rating": 89.0
+        },
+        {
+            "model": "Infinix Zero Ultra",
+            "rating": 89.0
+        },
+        {
+            "model": "Samsung Galaxy Note 10 Plus",
+            "rating": 89.0
+        },
+        {
+            "model": "Realme GT 2 Pro 5G",
+            "rating": 89.0
+        }
+    ]
+}

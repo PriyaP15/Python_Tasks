@@ -1,0 +1,144 @@
+2026-02-24 23:09:41,451 - INFO - GET http://127.0.0.1:8000/
+2026-02-24 23:09:41,451 - INFO - Status: 404
+2026-02-24 23:09:41,515 - INFO - GET http://127.0.0.1:8000/favicon.ico
+2026-02-24 23:09:41,515 - INFO - Status: 404
+2026-02-24 23:09:50,010 - INFO - GET http://127.0.0.1:8000/docs
+2026-02-24 23:09:50,010 - INFO - Status: 200
+2026-02-24 23:09:50,088 - INFO - GET http://127.0.0.1:8000/openapi.json
+2026-02-24 23:09:50,116 - INFO - Status: 200
+2026-02-24 23:10:31,555 - INFO - POST http://127.0.0.1:8000/v1/signup
+2026-02-24 23:10:47,779 - INFO - POST http://127.0.0.1:8000/v1/signup
+2026-02-24 23:14:03,187 | INFO | GET http://127.0.0.1:8000/docs | Status: 200 | Time: 0:00:00.002584
+2026-02-24 23:14:03,269 | INFO | GET http://127.0.0.1:8000/openapi.json | Status: 200 | Time: 0:00:00.025168
+2026-02-24 23:14:32,952 | ERROR | DB Error during signup: (pymysql.err.OperationalError) (1054, "Unknown column 'users.email' in 'field list'")
+[SQL: SELECT users.id AS users_id, users.email AS users_email, users.hashed_password AS users_hashed_password, users.`role` AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'user@example.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-02-24 23:14:32,957 | INFO | POST http://127.0.0.1:8000/v1/signup | Status: 500 | Time: 0:00:00.016783
+2026-02-24 23:17:29,871 | INFO | GET http://127.0.0.1:8000/docs | Status: 200 | Time: 0:00:00
+2026-02-24 23:17:29,923 | INFO | GET http://127.0.0.1:8000/openapi.json | Status: 200 | Time: 0:00:00.001003
+2026-02-24 23:17:53,597 | ERROR | DB Error during signup: (pymysql.err.OperationalError) (1054, "Unknown column 'users.email' in 'field list'")
+[SQL: SELECT users.id AS users_id, users.email AS users_email, users.hashed_password AS users_hashed_password, users.`role` AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'user@example.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-02-24 23:17:53,599 | INFO | POST http://127.0.0.1:8000/v1/signup | Status: 500 | Time: 0:00:00.005939
+2026-02-24 23:23:17,100 | INFO | GET http://127.0.0.1:8000/docs | Status: 200 | Time: 0:00:00
+2026-02-24 23:23:17,228 | INFO | GET http://127.0.0.1:8000/openapi.json | Status: 200 | Time: 0:00:00.000991
+2026-02-24 23:23:38,008 | ERROR | DB Error during signup: (pymysql.err.OperationalError) (1054, "Unknown column 'users.email' in 'field list'")
+[SQL: SELECT users.id AS users_id, users.email AS users_email, users.hashed_password AS users_hashed_password, users.`role` AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'user@example.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-02-24 23:23:38,010 | INFO | POST http://127.0.0.1:8000/v1/signup | Status: 500 | Time: 0:00:00.004634
+2026-02-24 23:25:24,617 | INFO | GET http://127.0.0.1:8000/docs | Status: 200 | Time: 0:00:00.002154
+2026-02-24 23:25:24,715 | INFO | GET http://127.0.0.1:8000/openapi.json | Status: 200 | Time: 0:00:00.021833
+2026-02-24 23:25:44,797 | WARNING | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\priya\anaconda3\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-02-24 23:26:22,650 | INFO | GET http://127.0.0.1:8000/docs | Status: 200 | Time: 0:00:00.002018
+2026-02-24 23:26:22,722 | INFO | GET http://127.0.0.1:8000/openapi.json | Status: 200 | Time: 0:00:00.024384
+2026-02-24 23:27:24,302 | WARNING | (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\priya\anaconda3\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-02-24 23:28:38,020 | INFO | GET http://127.0.0.1:8000/ | Status: 404 | Time: 0:00:00.000601
+2026-02-24 23:28:44,464 | INFO | GET http://127.0.0.1:8000/docs | Status: 200 | Time: 0:00:00
+2026-02-24 23:28:44,566 | INFO | GET http://127.0.0.1:8000/openapi.json | Status: 200 | Time: 0:00:00.023483
+2026-02-24 23:29:03,825 | INFO | New signup: user@example.com
+2026-02-24 23:29:03,825 | INFO | POST http://127.0.0.1:8000/v1/signup | Status: 201 | Time: 0:00:00.247918
+2026-02-24 23:29:33,342 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 200 | Time: 0:00:00.232273
+2026-02-24 23:29:57,826 | INFO | GET http://127.0.0.1:8000/v1/admin-only | Status: 401 | Time: 0:00:00.001305
+2026-02-24 23:30:44,147 | INFO | New signup: priyap@gamil.com
+2026-02-24 23:30:44,147 | INFO | POST http://127.0.0.1:8000/v1/signup | Status: 201 | Time: 0:00:00.229494
+2026-02-24 23:30:50,351 | INFO | GET http://127.0.0.1:8000/v1/admin-only | Status: 401 | Time: 0:00:00.000595
+2026-02-24 23:31:17,215 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 401 | Time: 0:00:00.001030
+2026-02-24 23:31:20,595 | INFO | GET http://127.0.0.1:8000/v1/admin-only | Status: 401 | Time: 0:00:00.000886
+2026-02-24 23:31:46,005 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 422 | Time: 0:00:00.001284
+2026-02-24 23:31:49,693 | INFO | GET http://127.0.0.1:8000/v1/admin-only | Status: 401 | Time: 0:00:00.000362
+2026-02-24 23:32:22,884 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 200 | Time: 0:00:00.213412
+2026-02-24 23:32:28,850 | INFO | GET http://127.0.0.1:8000/v1/admin-only | Status: 401 | Time: 0:00:00
+2026-02-24 23:32:36,732 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 200 | Time: 0:00:00.215965
+2026-02-24 23:32:48,464 | INFO | GET http://127.0.0.1:8000/v1/admin-only | Status: 401 | Time: 0:00:00.000506
+2026-02-24 23:34:46,492 | INFO | GET http://127.0.0.1:8000/docs | Status: 200 | Time: 0:00:00
+2026-02-24 23:34:46,580 | INFO | GET http://127.0.0.1:8000/openapi.json | Status: 200 | Time: 0:00:00.023665
+2026-02-24 23:34:58,799 | INFO | New signup: admin@example.com
+2026-02-24 23:34:58,799 | INFO | POST http://127.0.0.1:8000/v1/signup | Status: 201 | Time: 0:00:00.253483
+2026-02-24 23:35:14,015 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 200 | Time: 0:00:00.217057
+2026-02-24 23:37:37,623 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 422 | Time: 0:00:00.002992
+2026-02-24 23:38:55,083 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 422 | Time: 0:00:00.002018
+2026-02-24 23:39:00,764 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 422 | Time: 0:00:00.002132
+2026-02-24 23:39:02,496 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 422 | Time: 0:00:00.002476
+2026-02-24 23:41:10,886 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 422 | Time: 0:00:00.002245
+2026-02-24 23:41:11,905 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 422 | Time: 0:00:00.002246
+2026-02-24 23:41:12,586 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 422 | Time: 0:00:00.001864
+2026-02-25 00:10:14,437 | INFO | GET http://127.0.0.1:8000/docs | Status: 200 | Time: 0:00:00.014882
+2026-02-25 00:10:14,729 | INFO | GET http://127.0.0.1:8000/openapi.json | Status: 200 | Time: 0:00:00.056566
+2026-02-25 00:11:37,901 | INFO | POST http://127.0.0.1:8000/v1/signup | Status: 404 | Time: 0:00:00
+2026-02-25 00:12:11,543 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 422 | Time: 0:00:00.011295
+2026-02-25 00:14:21,544 | INFO | GET http://127.0.0.1:8000/ | Status: 404 | Duration: 0:00:00
+2026-02-25 00:14:29,241 | INFO | GET http://127.0.0.1:8000/docs | Status: 200 | Duration: 0:00:00
+2026-02-25 00:14:29,628 | INFO | GET http://127.0.0.1:8000/openapi.json | Status: 200 | Duration: 0:00:00.049581
+2026-02-25 00:15:15,815 | INFO | User created: admin@test.com
+2026-02-25 00:15:15,815 | INFO | POST http://127.0.0.1:8000/v1/signup | Status: 201 | Duration: 0:00:00.492691
+2026-02-25 00:16:26,142 | INFO | Login successful: admin@test.com
+2026-02-25 00:16:26,142 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 200 | Duration: 0:00:00.445019
+2026-02-25 00:16:44,518 | INFO | GET http://127.0.0.1:8000/v1/admin-only | Status: 200 | Duration: 0:00:00.029226
+2026-02-25 00:23:38,138 | INFO | GET http://127.0.0.1:8000/ | Status: 404 | Duration: 0:00:00
+2026-02-25 00:23:44,925 | INFO | GET http://127.0.0.1:8000/docs | Status: 200 | Duration: 0:00:00
+2026-02-25 00:23:45,105 | INFO | GET http://127.0.0.1:8000/openapi.json | Status: 200 | Duration: 0:00:00.050254
+2026-02-25 00:24:08,924 | INFO | POST http://127.0.0.1:8000/v1/signup | Status: 400 | Duration: 0:00:00.027826
+2026-02-25 00:24:59,026 | INFO | GET http://127.0.0.1:8000/v1/admin-only | Status: 401 | Duration: 0:00:00
+2026-02-25 00:25:21,777 | INFO | Login successful: admin@test.com
+2026-02-25 00:25:21,777 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 200 | Duration: 0:00:00.470686
+2026-02-25 00:34:45,925 | INFO | User created: priya.p12a2@gmail.com
+2026-02-25 00:34:45,925 | INFO | POST http://127.0.0.1:8000/v1/signup | Status: 201 | Duration: 0:00:00.443000
+2026-02-25 00:35:11,451 | INFO | Login successful: priya.p12a2@gmail.com
+2026-02-25 00:35:11,451 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 200 | Duration: 0:00:00.415008
+2026-02-25 05:40:20,117 | INFO | GET http://127.0.0.1:8000/docs | Status: 200 | Duration: 0:00:00.002422
+2026-02-25 05:40:20,445 | INFO | GET http://127.0.0.1:8000/openapi.json | Status: 200 | Duration: 0:00:00.054116
+2026-02-25 06:09:53,132 | INFO | GET http://127.0.0.1:8000/ | Status: 404 | Duration: 0:00:00
+2026-02-25 06:09:56,483 | INFO | GET http://127.0.0.1:8000/docs | Status: 200 | Duration: 0:00:00
+2026-02-25 06:09:56,670 | INFO | GET http://127.0.0.1:8000/openapi.json | Status: 200 | Duration: 0:00:00.056665
+2026-02-25 06:12:27,612 | INFO | GET http://127.0.0.1:8000/docs | Status: 200 | Duration: 0:00:00.002025
+2026-02-25 06:12:27,847 | INFO | GET http://127.0.0.1:8000/openapi.json | Status: 200 | Duration: 0:00:00.001772
+2026-02-25 06:12:41,338 | INFO | GET http://127.0.0.1:8000/v1/admin-only | Status: 401 | Duration: 0:00:00
+2026-02-25 06:12:57,754 | WARNING | Login failed for: admin
+2026-02-25 06:12:57,764 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 401 | Duration: 0:00:00.049701
+2026-02-25 06:13:56,600 | INFO | POST http://127.0.0.1:8000/v1/signup | Status: 400 | Duration: 0:00:00.016847
+2026-02-25 06:14:22,564 | INFO | Login successful: priya.p12a2@gmail.com
+2026-02-25 06:14:22,575 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 200 | Duration: 0:00:00.490026
+2026-02-25 06:14:40,430 | INFO | GET http://127.0.0.1:8000/v1/admin-only | Status: 200 | Duration: 0:00:00.002769
+2026-02-25 06:18:22,684 | INFO | Inventory ETL successful for inventory.csv
+2026-02-25 06:18:22,684 | INFO | POST http://127.0.0.1:8000/v1/inventory/upload-analytics | Status: 200 | Duration: 0:00:00.076581
+2026-02-25 06:25:47,779 | INFO | GET http://127.0.0.1:8000/docs | Status: 200 | Duration: 0:00:00
+2026-02-25 06:25:48,076 | INFO | GET http://127.0.0.1:8000/openapi.json | Status: 200 | Duration: 0:00:00.053018
+2026-02-25 06:26:10,640 | INFO | POST http://127.0.0.1:8000/v1/inventory/upload-analytics | Status: 401 | Duration: 0:00:00.003063
+2026-02-25 06:26:22,763 | INFO | Login successful: priya.p12a2@gmail.com
+2026-02-25 06:26:22,763 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 200 | Duration: 0:00:00.475076
+2026-02-25 06:26:27,778 | INFO | ETL successful for inventory.csv
+2026-02-25 06:26:27,778 | INFO | POST http://127.0.0.1:8000/v1/inventory/upload-analytics | Status: 200 | Duration: 0:00:00.061073
+2026-02-25 10:22:20,913 | INFO | GET http://127.0.0.1:8000/ | Status: 404 | Duration: 0:00:00.002011
+2026-02-25 10:22:20,971 | INFO | GET http://127.0.0.1:8000/favicon.ico | Status: 404 | Duration: 0:00:00
+2026-02-25 10:22:25,295 | INFO | GET http://127.0.0.1:8000/docs | Status: 200 | Duration: 0:00:00
+2026-02-25 10:22:25,968 | INFO | GET http://127.0.0.1:8000/openapi.json | Status: 200 | Duration: 0:00:00.058516
+2026-02-25 10:22:49,788 | INFO | POST http://127.0.0.1:8000/v1/signup | Status: 400 | Duration: 0:00:00.030296
+2026-02-25 10:23:03,746 | INFO | User created: user1@example.com
+2026-02-25 10:23:03,746 | INFO | POST http://127.0.0.1:8000/v1/signup | Status: 201 | Duration: 0:00:00.487032
+2026-02-25 10:23:38,210 | INFO | GET http://127.0.0.1:8000/v1/admin-only | Status: 401 | Duration: 0:00:00.000503
+2026-02-25 10:24:02,458 | INFO | Login successful: user1@example.com
+2026-02-25 10:24:02,460 | INFO | POST http://127.0.0.1:8000/v1/login | Status: 200 | Duration: 0:00:00.471280
+2026-02-25 10:24:11,622 | INFO | GET http://127.0.0.1:8000/v1/admin-only | Status: 403 | Duration: 0:00:00.008866
+2026-02-25 10:24:33,106 | INFO | POST http://127.0.0.1:8000/v1/inventory/upload-analytics | Status: 403 | Duration: 0:00:00.002574
